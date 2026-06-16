@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxa um Pouco 💆‍♂️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f2f1;
+            margin: 0;
+            padding: 20px;
+        }
+       
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+       
+        h1 {
+            text-align: center;
+            color: #2e7d7a;
+            margin-bottom: 25px;
+        }
+       
+        .conteudo {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+       
+        .imagem {
+            width: 45%;
+            position: relative;
+        }
+       
+        .imagem img {
+            width: 100%;
+            border-radius: 12px;
+            transition: opacity 0.8s ease;
+        }
+       
+        .texto {
+            width: 55%;
+            color: #444;
+        }
+       
+        .texto h2 {
+            color: #00695c;
+        }
+       
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+       
+        /* Responsivo */
+        @media (max-width: 600px) {
+            .conteudo {
+                flex-direction: column;
+            }
+            .imagem, .texto {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Relaxa um Pouco 💆‍♂️</h1>
+       
+        <div class="conteudo">
+            <!-- Imagem que vai trocar -->
+            <div class="imagem">
+                <img id="imagemRelax" src="https://picsum.photos/id/1015/600/400&quot; alt="Imagem relaxante">
+            </div>
+           
+            <!-- Texto -->
+            <div class="texto">
+                <h2>Respire fundo...</h2>
+                <p>Às vezes só precisamos parar um pouco, olhar algo bonito e deixar a mente descansar.</p>
+                <p>Deixe as imagens trocarem automaticamente. Fica um tempinho aqui respirando devagar.</p>
+            </div>
+        </div>
+       
+        <footer>
+            Imagens trocam a cada 8 segundos • Site simples para relaxar
+        </footer>
+    </div>
+
+    <script>
+        // Lista de imagens relaxantes (você pode adicionar ou trocar)
+        const imagens = [
+ bgtttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+        ];
+       
+        let indiceAtual = 0;
+        const imgElement = document.getElementById('imagemRelax');
+       
+        function trocarImagem() {u8
+            indiceAtual = (indiceAtual + 1) % imagens.length;
+            imgElement.style.opacity = 0;
+           
+            setTimeout(() => {
+                imgElement.src = imagens[indiceAtual];
+                imgElement.style.opacity = 1;
+            }, 800);
+        }
+       
+        // Troca a imagem a cada 8 segundos
+        setInterval(trocarImagem, 8000);
+    </script>
+</body>
+</html>
